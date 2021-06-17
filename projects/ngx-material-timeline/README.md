@@ -4,6 +4,8 @@ Angular library for timeline feature. This library includes various customisatio
 
 Timeline consist of timecards and each timecard can be customized.
 
+This library works only with [Angular Material](https://material.angular.io/).
+
 ## Installation
 ```sh
 npm install ngx-material-timeline

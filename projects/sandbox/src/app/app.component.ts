@@ -17,8 +17,7 @@ export class AppComponent {
       timecardFloatingIconColor: 'orange',
       timecardIconColor: 'orange',
       align: 'left',
-      description: `The ML model development 
-    phase has started. This phase will consist of various projects and activities which will focus on ML model training.', themeColor: '#004c88`,
+      description: `This is the description. This is the description. This is the description. This is the description.This is the description.This is the description.`,
     },
     {
       title: 'Right Card Floating & Icon',
@@ -27,8 +26,7 @@ export class AppComponent {
       timecardFloatingIcon: 'error',
       // timecardColor: 'red',
       align: 'right',
-      description: `The ML model development
-    phase has started. This phase will consist of various projects and activities which will focus on ML model training.', themeColor: '#004c88`,
+      description: `This is the description. This is the description. This is the description. This is the description.This is the description.This is the description.`,
     },
     {
       title: 'Left Card No FLoating & No Icon',
@@ -39,8 +37,7 @@ export class AppComponent {
       timecardTitleColor: 'white',
       timecardTextColor: 'black',
       align: 'left',
-      description: `The ML model development 
-    phase has started. This phase will consist of various projects and activities which will focus on ML model training.', themeColor: '#004c88`,
+      description: `This is the description. This is the description. This is the description. This is the description.This is the description.This is the description.`,
     },
     {
       title: 'Right Card No FLoating & No Icon',
@@ -48,8 +45,7 @@ export class AppComponent {
       timecardIcon: '',
       timecardFloatingIcon: '',
       align: 'right',
-      description: `The ML model development 
-    phase has started. This phase will consist of various projects and activities which will focus on ML model training.', themeColor: '#004c88`,
+      description: `This is the description. This is the description. This is the description. This is the description.This is the description.This is the description.`,
     },
     {
       title: 'Left Card No Floating & Icon',
@@ -57,8 +53,7 @@ export class AppComponent {
       timecardIcon: 'tour',
       timecardFloatingIcon: '',
       align: 'left',
-      description: `The ML model development 
-    phase has started. This phase will consist of various projects and activities which will focus on ML model training.', themeColor: '#004c88`,
+      description: `This is the description. This is the description. This is the description. This is the description.This is the description.This is the description.`,
     },
     {
       title: 'Right Card No Floating & Icon',
@@ -66,8 +61,7 @@ export class AppComponent {
       timecardIcon: 'tour',
       timecardFloatingIcon: '',
       align: 'right',
-      description: `The ML model development 
-    phase has started. This phase will consist of various projects and activities which will focus on ML model training.', themeColor: '#004c88`,
+      description: `This is the description. This is the description. This is the description. This is the description.This is the description.This is the description.`,
     },
     {
       title: 'Left Card Floating & No Icon',
@@ -75,8 +69,7 @@ export class AppComponent {
       timecardIcon: '',
       timecardFloatingIcon: 'tour',
       align: 'left',
-      description: `The ML model development 
-    phase has started. This phase will consist of various projects and activities which will focus on ML model training.', themeColor: '#004c88`,
+      description: `This is the description. This is the description. This is the description. This is the description.This is the description.This is the description.`,
     },
     {
       title: 'Right Card Floating & No Icon',
@@ -84,8 +77,7 @@ export class AppComponent {
       timecardIcon: '',
       timecardFloatingIcon: 'tour',
       align: 'right',
-      description: `The ML model development 
-    phase has started. This phase will consist of various projects and activities which will focus on ML model training.', themeColor: '#004c88`,
+      description: `This is the description. This is the description. This is the description. This is the description.This is the description.This is the description.`,
     },
   ];
 

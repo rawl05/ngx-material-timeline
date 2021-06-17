@@ -71,6 +71,7 @@ actionEvent | floatingIconClick | Event emmiter for click on floating icon in ti
 actionEvent | timecardIconClick | Event emmiter for click on timecard icon in timeline.
 actionEvent | timecardClosed | Event emmiter for close of particular timecard descripion.
 actionEvent | timecardOpened | Event emmiter for open of particular timecard descripion.
+actionEvent | addtimecardClick | Event emmiter for add timecard button.
 
 #### Timecard Model
 

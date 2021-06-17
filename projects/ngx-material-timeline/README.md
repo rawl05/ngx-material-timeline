@@ -119,11 +119,11 @@ MIT
 ## Samples
 
 Sample Images:
-[Sample Images](https://github.com/jerk05/ngx-material-timeline/tree/master/projects/ngx-material-timeline/sampleImages)
+[Sample Images](https://github.com/rawl05/ngx-material-timeline/tree/master/projects/ngx-material-timeline/sampleImages)
 
  ## Help and Support
 
-[GitHub](https://github.com/jerk05/ngx-material-timeline)
+[GitHub](https://github.com/rawl05/ngx-material-timeline)
 
 
 

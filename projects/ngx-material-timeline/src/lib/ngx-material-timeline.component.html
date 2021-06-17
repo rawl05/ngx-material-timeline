@@ -20,7 +20,7 @@
         </div>
     </div>
     <div class="add-timecard" *ngIf="addTimecardEnable && filteredTimelineArray && filteredTimelineArray.length">
-        <button class="add-timecard-button" mat-button matSuffix mat-icon-button>
+        <button class="add-timecard-button" mat-button matSuffix mat-icon-button (click)= 'addTimecardEvent($event)'>
             <mat-icon [ngStyle]="{color: defaultThemeColor}" class="add-timecard-icon">add_circle_outline</mat-icon>
         </button>
     </div>

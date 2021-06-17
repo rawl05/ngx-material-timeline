@@ -17,11 +17,11 @@ export class NgxMaterialTimelineComponent implements OnInit {
     this.timelineArray = value;
   }
 
-  get addTimecard(): any {
+  get addTimecard(): boolean {
     return this.addTimecardEnable;
   }
   @Input('addTimecard')
-  set addTimecard(value: any) {
+  set addTimecard(value: boolean) {
     this.addTimecardEnable = value;
   }
 
@@ -103,6 +103,10 @@ export class NgxMaterialTimelineComponent implements OnInit {
     } else {
       this.filteredTimelineArray = this.timeline;
     }
+  }
+
+  addTimecardEvent(event) {
+    this.triggerEvent({eventType: 'addTimecardClick', data: {}, event});
   }
 
   triggerEvent(event) {

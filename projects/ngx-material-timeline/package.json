@@ -1,0 +1,12 @@
+{
+  "name": "ngx-material-timeline",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^9.1.13",
+    "@angular/core": "^9.1.13",
+    "@angular/material": "^9.2.4"
+  },
+  "dependencies": {
+    "tslib": "^1.10.0"
+  }
+}

@@ -14,7 +14,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-material-timeline": [
+        "dist/ngx-material-timeline/ngx-material-timeline",
+        "dist/ngx-material-timeline"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

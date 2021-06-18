@@ -6,6 +6,12 @@ Timeline consist of timecards and each timecard can be customized.
 
 This library works only with [Angular Material](https://material.angular.io/).
 
+## Demo
+
+[Working Demo](https://ngx-material-timeline.stackblitz.io)
+
+[Hands On Demo](https://stackblitz.com/edit/ngx-material-timeline?file=src/app/app.component.ts)
+
 ## Installation
 ```sh
 npm install ngx-material-timeline
@@ -52,6 +58,11 @@ Now you can use the <ngx-material-timeline> selector in html file as required.
         </ngx-material-timeline>
     </body>
 </html>
+```
+
+In style.scss import the material theme.
+```css
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 ```
 
 Setting up Global options for ngx-material-timeline selector.

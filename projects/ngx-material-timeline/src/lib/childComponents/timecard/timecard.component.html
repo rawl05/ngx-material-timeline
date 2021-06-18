@@ -1,97 +1,174 @@
-<div class="timecard-container" [ngClass]="{
+<div
+  class="timecard-container"
+  [ngClass]="{
     'right-align-no-icon-no-floating-icon':
       timecardData.align === 'right' &&
       !timecardData.timecardFloatingIcon &&
-      !timecardData.timecardIcon,
+      !timecardData.timecardIcon &&
+      !forceAlign,
     'left-align-no-icon-no-floating-icon':
       timecardData.align === 'left' &&
       !timecardData.timecardFloatingIcon &&
-      !timecardData.timecardIcon,
+      !timecardData.timecardIcon &&
+      !forceAlign,
     'right-align-no-icon-floating-icon':
       timecardData.align === 'right' &&
       timecardData.timecardFloatingIcon &&
-      !timecardData.timecardIcon,
+      !timecardData.timecardIcon &&
+      !forceAlign,
     'left-align-no-icon-floating-icon':
       timecardData.align === 'left' &&
       timecardData.timecardFloatingIcon &&
-      !timecardData.timecardIcon,
+      !timecardData.timecardIcon &&
+      !forceAlign,
     'right-align-with-icon-no-floating-icon':
       timecardData.align === 'right' &&
       !timecardData.timecardFloatingIcon &&
-      timecardData.timecardIcon,
+      timecardData.timecardIcon &&
+      !forceAlign,
     'left-align-with-icon-no-floating-icon':
       timecardData.align === 'left' &&
       !timecardData.timecardFloatingIcon &&
-      timecardData.timecardIcon,
+      timecardData.timecardIcon &&
+      !forceAlign,
     'left-align-with-icon-floating-icon':
       timecardData.align === 'left' &&
       timecardData.timecardFloatingIcon &&
-      timecardData.timecardIcon,
+      timecardData.timecardIcon &&
+      !forceAlign,
     'right-align-with-icon-floating-icon':
       timecardData.align === 'right' &&
       timecardData.timecardFloatingIcon &&
-      timecardData.timecardIcon
-  }">
-  <!-- 'right-align-no-icon-no-floating-icon-narrow': timecardData.align === 'right' && !timecardData.timecardFloatingIcon && !timecardData.timecardIcon,
-    'right-align-no-icon-floating-icon-narrow': timecardData.align === 'right' && timecardData.timecardFloatingIcon && !timecardData.timecardIcon,
-    'right-align-with-icon-no-floating-icon-narrow': timecardData.align === 'right' && !timecardData.timecardFloatingIcon && timecardData.timecardIcon,
-    'right-align-with-icon-floating-icon-narrow': timecardData.align === 'right' && timecardData.timecardFloatingIcon && timecardData.timecardIcon -->
-  <div class="floating-icon-container" *ngIf="timecardData.align === 'left' && timecardData.timecardFloatingIcon"
-    (click)="triggerEvent('floatingIconClick', timecardData, $event)">
-    <mat-icon class="floating-icon"
-      [ngStyle]="{ color: timecardData.timecardFloatingIconColor ? timecardData.timecardFloatingIconColor : defaultThemeColor}">
+      timecardData.timecardIcon &&
+      !forceAlign,
+    'right-align-no-icon-no-floating-icon-narrow':
+      !timecardData.timecardFloatingIcon &&
+      !timecardData.timecardIcon &&
+      forceAlign,
+    'right-align-no-icon-floating-icon-narrow':
+      timecardData.timecardFloatingIcon &&
+      !timecardData.timecardIcon &&
+      forceAlign,
+    'right-align-with-icon-no-floating-icon-narrow':
+      !timecardData.timecardFloatingIcon &&
+      timecardData.timecardIcon &&
+      forceAlign,
+    'right-align-with-icon-floating-icon-narrow':
+      timecardData.timecardFloatingIcon &&
+      timecardData.timecardIcon &&
+      forceAlign
+  }"
+>
+  <div
+    class="floating-icon-container"
+    *ngIf="
+      !forceAlign &&
+      timecardData.align === 'left' &&
+      timecardData.timecardFloatingIcon
+    "
+    (click)="triggerEvent('floatingIconClick', timecardData, $event)"
+  >
+    <mat-icon
+      class="floating-icon"
+      [ngStyle]="{
+        color: timecardData.timecardFloatingIconColor
+          ? timecardData.timecardFloatingIconColor
+          : defaultThemeColor
+      }"
+    >
       {{ timecardData.timecardFloatingIcon }}
     </mat-icon>
   </div>
 
-  <div class="vertical-link-container" *ngIf="!timecardData.timecardIcon && timecardData.align === 'right'"></div>
+  <div
+    class="vertical-link-container"
+    *ngIf="
+      !timecardData.timecardIcon &&
+      (forceAlign || timecardData.align === 'right')
+    "
+  ></div>
 
-  <div class="right-link-container" *ngIf="timecardData.align === 'right'">
+  <div
+    class="right-link-container"
+    *ngIf="forceAlign || timecardData.align === 'right'"
+  >
     <div class="vertical-link-icon" *ngIf="timecardData.timecardIcon">
-      <div class="icon-class" (click)="triggerEvent('timecardIconClick', timecardData, $event)"
-        [ngStyle]="{border: timecardData.timecardIconColor ? '3px solid ' + timecardData.timecardIconColor : '3px solid ' + defaultThemeColor}">
+      <div
+        class="icon-class"
+        (click)="triggerEvent('timecardIconClick', timecardData, $event)"
+        [ngStyle]="{
+          border: timecardData.timecardIconColor
+            ? '3px solid ' + timecardData.timecardIconColor
+            : '3px solid ' + defaultThemeColor
+        }"
+      >
         <mat-icon
-          [ngStyle]="{color: timecardData.timecardIconColor ? timecardData.timecardIconColor : defaultThemeColor}">{{
-          timecardData.timecardIcon }}</mat-icon>
+          [ngStyle]="{
+            color: timecardData.timecardIconColor
+              ? timecardData.timecardIconColor
+              : defaultThemeColor
+          }"
+          >{{ timecardData.timecardIcon }}</mat-icon
+        >
       </div>
       <div class="vertical-link-container"></div>
     </div>
-    <div class="horizontal-link-container" [ngClass]="{
+    <div
+      class="horizontal-link-container"
+      [ngClass]="{
         'horizontal-link-with-icon': timecardData.timecardIcon,
         'horizontal-link-no-icon': !timecardData.timecardIcon
-      }"></div>
+      }"
+    ></div>
   </div>
 
-  <div class="timecard" [ngStyle]="{
+  <div
+    class="timecard"
+    [ngStyle]="{
       border: timecardData.timecardColor
         ? '2px solid ' + timecardData.timecardColor
         : '2px solid #bfbebe'
-    }">
-    <div class="header" [ngStyle]="{
+    }"
+  >
+    <div
+      class="header"
+      [ngStyle]="{
         color: timecardData.timecardTitleColor
           ? timecardData.timecardTitleColor
           : 'white',
-        background: !timecardData.timecardColor ? defaultThemeColor: timecardData.timecardColor
-      }">
+        background: !timecardData.timecardColor
+          ? defaultThemeColor
+          : timecardData.timecardColor
+      }"
+    >
       {{ timecardData.title }}
     </div>
     <mat-accordion>
-      <mat-expansion-panel class="expansion-panel" [expanded]="expanded"
+      <mat-expansion-panel
+        class="expansion-panel"
+        [expanded]="expanded"
         (closed)="triggerEvent('timecardClosed', timecardData, $event)"
-        (opened)="triggerEvent('timecardOpened', timecardData, $event)">
+        (opened)="triggerEvent('timecardOpened', timecardData, $event)"
+      >
         <mat-expansion-panel-header class="expansion-panel-header">
-          <mat-panel-title [ngStyle]="{
+          <mat-panel-title
+            [ngStyle]="{
+              color: timecardData.timecardTextColor
+                ? timecardData.timecardTextColor
+                : 'black'
+            }"
+          >
+            {{ timecardData.timestamp }}
+          </mat-panel-title>
+          <mat-panel-description> </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div
+          [ngStyle]="{
             color: timecardData.timecardTextColor
               ? timecardData.timecardTextColor
               : 'black'
-          }"> {{ timecardData.timestamp }} </mat-panel-title>
-          <mat-panel-description> </mat-panel-description>
-        </mat-expansion-panel-header>
-        <div [ngStyle]="{
-          color: timecardData.timecardTextColor
-            ? timecardData.timecardTextColor
-            : 'black'
-        }">
+          }"
+        >
           {{ timecardData.description }}
         </div>
         <!-- <div class="action-icons">
@@ -106,27 +183,62 @@
     </mat-accordion>
   </div>
 
-  <div class="left-link-container" *ngIf="timecardData.align === 'left'">
-    <div class="horizontal-link-container" [ngClass]="{
+  <div
+    class="left-link-container"
+    *ngIf="!forceAlign && timecardData.align === 'left'"
+  >
+    <div
+      class="horizontal-link-container"
+      [ngClass]="{
         'horizontal-link-with-icon': timecardData.timecardIcon,
         'horizontal-link-no-icon': !timecardData.timecardIcon
-      }"></div>
+      }"
+    ></div>
     <div class="vertical-link-icon" *ngIf="timecardData.timecardIcon">
-      <div class="icon-class" (click)="triggerEvent('timecardIconClick', timecardData, $event)"
-        [ngStyle]="{border: timecardData.timecardIconColor ? '3px solid ' + timecardData.timecardIconColor : '3px solid ' + defaultThemeColor}">
+      <div
+        class="icon-class"
+        (click)="triggerEvent('timecardIconClick', timecardData, $event)"
+        [ngStyle]="{
+          border: timecardData.timecardIconColor
+            ? '3px solid ' + timecardData.timecardIconColor
+            : '3px solid ' + defaultThemeColor
+        }"
+      >
         <mat-icon
-          [ngStyle]="{color: timecardData.timecardIconColor ? timecardData.timecardIconColor : defaultThemeColor}">{{
-          timecardData.timecardIcon }}</mat-icon>
+          [ngStyle]="{
+            color: timecardData.timecardIconColor
+              ? timecardData.timecardIconColor
+              : defaultThemeColor
+          }"
+          >{{ timecardData.timecardIcon }}</mat-icon
+        >
       </div>
       <div class="vertical-link-container"></div>
     </div>
   </div>
-  <div class="vertical-link-container" *ngIf="!timecardData.timecardIcon && timecardData.align === 'left'"></div>
+  <div
+    class="vertical-link-container"
+    *ngIf="
+      !timecardData.timecardIcon && !forceAlign && timecardData.align === 'left'
+    "
+  ></div>
 
-  <div class="floating-icon-container" *ngIf="timecardData.align === 'right' && timecardData.timecardFloatingIcon"
-    (click)="triggerEvent('floatingIconClick', timecardData, $event)">
-    <mat-icon class="floating-icon"
-      [ngStyle]="{ color: timecardData.timecardFloatingIconColor ? timecardData.timecardFloatingIconColor : defaultThemeColor}">
+  <div
+    class="floating-icon-container"
+    *ngIf="
+      (forceAlign || timecardData.align === 'right') &&
+      timecardData.timecardFloatingIcon
+    "
+    (click)="triggerEvent('floatingIconClick', timecardData, $event)"
+  >
+    <mat-icon
+      class="floating-icon"
+      [ngStyle]="{
+        color: timecardData.timecardFloatingIconColor
+          ? timecardData.timecardFloatingIconColor
+          : defaultThemeColor
+      }"
+    >
       {{ timecardData.timecardFloatingIcon }}
     </mat-icon>
   </div>

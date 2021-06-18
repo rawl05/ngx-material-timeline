@@ -1,181 +1,178 @@
-
 // $themeColor: #004c88;
 $themeColor: yellow;
 $timepointColor: #bfbebe;
 
 @mixin icon-class {
-    z-index: 10;
-    height: 32px;
-    width: 32px;
-    border-radius: 100%;
-    // border: 3px solid $themeColor;
-    cursor: pointer;
+  z-index: 10;
+  height: 32px;
+  width: 32px;
+  border-radius: 100%;
+  // border: 3px solid $themeColor;
+  cursor: pointer;
 }
 @mixin icons {
-    font-size: 31px;
-    height: 0px;
-    width: 0px;
-    background-color: white;
-    // color: $themeColor;
+  font-size: 31px;
+  height: 0px;
+  width: 0px;
+  background-color: white;
+  // color: $themeColor;
 }
 
 @mixin horizontalLink {
-    margin-top: 18px;
-    height: 2px;
+  margin-top: 18px;
+  height: 2px;
 }
 
 .timecard-container {
+  display: flex;
+  .right-link-container {
     display: flex;
-    .right-link-container {
-        display: flex;
-        .vertical-link-icon {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            .icon-class {
-                @include icon-class();
-                mat-icon {
-                    @include icons();
-                }
-            }
-            .vertical-link-container {
-                background: $timepointColor;
-                width: 2px;
-                height: calc(100% - 36px);
-            }
+    .vertical-link-icon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .icon-class {
+        @include icon-class();
+        mat-icon {
+          @include icons();
         }
-        .horizontal-link-container {
-            @include horizontalLink();
-        }
+      }
+      .vertical-link-container {
+        background: $timepointColor;
+        width: 2px;
+        height: calc(100% - 36px);
+      }
     }
-    .timecard {
-        width: 310px;
-        border: 2px solid $timepointColor;
-        border-radius: 5px;
-        // padding: 3px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 12px;
-        .header {
-            border-radius: 3px;
-            text-align: center;
-            width: 100%;
-            padding: 2px;
-            font-weight: 500;
-        }
+    .horizontal-link-container {
+      @include horizontalLink();
+    }
+  }
+  .timecard {
+    width: 310px;
+    border: 2px solid $timepointColor;
+    border-radius: 5px;
+    // padding: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 12px;
+    .header {
+      border-radius: 3px;
+      text-align: center;
+      width: 100%;
+      padding: 2px;
+      font-weight: 500;
+    }
 
-        .expansion-panel {
-            width: 285px;
-            word-break: break-word;
-            padding: 3px;
-            box-shadow: none;
-            .expansion-panel-header {
-                padding: 0px;
-                height: 36px !important;
-                font-size: 14px;
-            }
-            .expansion-panel-header:hover {
-                background: none;
-            }
-            /* .action-icons {
+    .expansion-panel {
+      width: 285px;
+      word-break: break-word;
+      padding: 3px;
+      box-shadow: none;
+      .expansion-panel-header {
+        padding: 0px;
+        height: 36px !important;
+        font-size: 14px;
+      }
+      .expansion-panel-header:hover {
+        background: none;
+      }
+      /* .action-icons {
                 display: flex;
                 align-items: center;
                 justify-content: flex-end;
                 color: gray;
             } */
-        }
     }
-    .left-link-container {
-        display: flex;
-        .horizontal-link-container {
-            @include horizontalLink();
-        }
-        .vertical-link-icon {
-            width: 36px;
-            align-items: center;
-            display: flex;
-            flex-direction: column;
-            .icon-class {
-                @include icon-class();
-                mat-icon {
-                    @include icons();
-                }
-            }
-            .vertical-link-container {
-                background: $timepointColor;
-                width: 2px;
-                height: calc(100% - 36px);
-            }
-        }
+  }
+  .left-link-container {
+    display: flex;
+    .horizontal-link-container {
+      @include horizontalLink();
     }
-    .vertical-link-container {
+    .vertical-link-icon {
+      width: 36px;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      .icon-class {
+        @include icon-class();
+        mat-icon {
+          @include icons();
+        }
+      }
+      .vertical-link-container {
         background: $timepointColor;
         width: 2px;
+        height: calc(100% - 36px);
+      }
     }
+  }
+  .vertical-link-container {
+    background: $timepointColor;
+    width: 2px;
+  }
 
-    .floating-icon-container {
-        display: flex;
-        width: 40px;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 12px;
+  .floating-icon-container {
+    display: flex;
+    width: 40px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
 
-        .floating-icon {
-            cursor: pointer;
-        }
+    .floating-icon {
+      cursor: pointer;
     }
+  }
 }
 
 .left-align-no-icon-no-floating-icon {
-    margin-right: 404px;
+  margin-right: 404px;
 }
 .right-align-no-icon-no-floating-icon {
-    margin-left: 410px;
+  margin-left: 410px;
 }
 
 .left-align-with-icon-floating-icon {
-    margin-right: 425px;
+  margin-right: 425px;
 }
 .right-align-with-icon-floating-icon {
-    margin-left: 431px;
+  margin-left: 431px;
 }
 
 .left-align-with-icon-no-floating-icon {
-    margin-right: 385px;
+  margin-right: 385px;
 }
 .right-align-with-icon-no-floating-icon {
-    margin-left: 391px;
+  margin-left: 391px;
 }
 
 .right-align-no-icon-floating-icon {
-    margin-left: 450px;
+  margin-left: 450px;
 }
 .left-align-no-icon-floating-icon {
-    margin-right: 444px;
+  margin-right: 444px;
 }
-
 
 .right-align-no-icon-no-floating-icon-narrow {
-    margin-left: 18px;
+  margin-left: 18px;
 }
 .right-align-with-icon-floating-icon-narrow {
-    margin-left: 40px;
+  margin-left: 40px;
 }
 .right-align-with-icon-no-floating-icon-narrow {
-    margin-left: 0px;
+  margin-left: 0px;
 }
 .right-align-no-icon-floating-icon-narrow {
-    margin-left: 58px;
+  margin-left: 58px;
 }
 
 .horizontal-link-no-icon {
-    background-color: $timepointColor;
-    width: 93px;
-
+  background-color: $timepointColor;
+  width: 93px;
 }
 
 .horizontal-link-with-icon {
-    background-color: $timepointColor;
-    width: 74px;
+  background-color: $timepointColor;
+  width: 74px;
 }

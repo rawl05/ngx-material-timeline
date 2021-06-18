@@ -17,6 +17,14 @@ export class NgxMaterialTimelineComponent implements OnInit {
     this.timelineArray = value;
   }
 
+  get addTimecardPosition(): string {
+    return this.addTimecardPositionValue;
+  }
+  @Input('addTimecardPosition')
+  set addTimecardPosition(value: string) {
+    this.addTimecardPositionValue = value;
+  }
+
   get addTimecard(): boolean {
     return this.addTimecardEnable;
   }
@@ -55,6 +63,7 @@ export class NgxMaterialTimelineComponent implements OnInit {
   filteredTimelineArray: Array<TimelineCardModel>;
 
   addTimecardEnable = false;
+  addTimecardPositionValue = 'bottom';
   isExpandAll = false;
   isFilterEnabled = true;
   screenWidth: number;

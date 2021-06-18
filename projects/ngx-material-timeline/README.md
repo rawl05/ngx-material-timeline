@@ -43,7 +43,13 @@ Now you can use the <ngx-material-timeline> selector in html file as required.
         <title>Hello world!</title>
     </head>
     <body>
-        <ngx-material-timeline></ngx-material-timeline>
+        <ngx-material-timeline
+          [timeline]='timelineArray'
+          [addTimecard]='true'
+          [addTimecardPosition]='"bottom"'
+          [enableFilter]='true'
+          (actionEvent)='captureEvent($event)'>
+        </ngx-material-timeline>
     </body>
 </html>
 ```
@@ -55,6 +61,7 @@ Option | Type | Default | Description
 ---------- | --------- | --------- | -------------------
 timeline | array | [] | Array of timecards to be displayed in timeline.
 addTimecard | boolean | false | Display the add timeline button at the bottom of the timeline.
+addTimecardPosition | string | bottom | Display the add timeline button at the bottom of the timeline.
 expandAll | boolean | false | Expand descriptions of all the timecards.
 enableFilter | boolean | true | Enable the filter option to filter timecards in timeline.
 defaultTheme | string | #004c88 | Default theme color for timeline. Accepts hex value or any color format.

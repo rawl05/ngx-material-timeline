@@ -47,6 +47,7 @@ export class TimecardComponent implements OnInit {
   screen: number;
   expanded: boolean;
   defaultThemeColor: string;
+  forceAlign = false;
 
   constructor() {
   }
@@ -55,6 +56,11 @@ export class TimecardComponent implements OnInit {
   }
 
   updateWidth() {
+    if (this.screenWidth <= 950) {
+      this.forceAlign = true;
+    } else {
+      this.forceAlign = false;
+    }
   }
 
   triggerEvent(eventType, data = {}, event) {

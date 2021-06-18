@@ -1,43 +1,52 @@
-html, body { height: 100%; overflow-y: hidden; }
-body { margin: 0;}
+html,
+body {
+  height: 100%;
+  overflow-y: hidden;
+}
+body {
+  margin: 0;
+}
 
 .main-container {
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-    font-size: 14px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .controls {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 5px;
+    .filter {
+      margin-left: 20px;
+    }
+  }
+  .timeline {
     display: flex;
     flex-direction: column;
     align-items: center;
-    .controls {
-        display: flex;
-        justify-content: flex-start;
-        width: 100%;
-        padding: 5px;
-        .filter {
-            margin-left: 20px;
-        }
+    .timecard-parent {
     }
-    .timeline {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        .timecard-parent {
-        }
+  }
+  .add-timecard {
+    .add-timecard-button {
+      background: none;
+      .add-timecard-icon {
+        font-size: 36px;
+        height: 32px;
+        width: 32px;
+      }
     }
-    .add-timecard {
-        .add-timecard-button {
-            background: none;
-            .add-timecard-icon {
-                font-size: 36px;
-                height: 32px;
-                width: 32px;
-            }
-        }
-    }
-    .no-data-found {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: inherit;
-    }
+  }
+  .no-data-found {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+  }
+}
 
+.margin-narrow {
+  margin-right: 392px;
 }

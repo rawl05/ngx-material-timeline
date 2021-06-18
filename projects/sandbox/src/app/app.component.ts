@@ -11,7 +11,7 @@ export class AppComponent {
     {
       title: 'Left Card Floating & Icon',
       timestamp: 'Wed, 12 May 2021 10:41:46',
-      timecardIcon: 'tour',
+      // timecardIcon: 'tour',
       timecardFloatingIcon: 'warning',
       timecardColor: 'orange',
       timecardFloatingIconColor: 'orange',
@@ -24,7 +24,7 @@ export class AppComponent {
       timestamp: 'Wed, 12 May 2021 10:41:46',
       timecardIcon: 'tour',
       timecardFloatingIcon: 'error',
-      // timecardColor: 'red',
+      timecardColor: 'red',
       align: 'right',
       description: `This is the description. This is the description. This is the description. This is the description.This is the description.This is the description.`,
     },

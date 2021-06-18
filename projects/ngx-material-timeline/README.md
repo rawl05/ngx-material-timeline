@@ -132,17 +132,6 @@ timecardTextColor | string | black | Color for timecard description and timestam
 ## License
 
 MIT
-
-
-
-
-## Samples
-
-Sample Images:
-![Sample Image 1](https://github.com/rawl05/ngx-material-timeline/blob/master/projects/ngx-material-timeline/sampleImages/sample_image1.PNG?raw=true)
-
-![Sample Image 2](https://github.com/rawl05/ngx-material-timeline/blob/master/projects/ngx-material-timeline/sampleImages/sample_image3.PNG?raw=true)
-
  ## Help and Support
 
 [GitHub](https://github.com/rawl05/ngx-material-timeline)
